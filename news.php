@@ -8,21 +8,7 @@
     </head>
     <body>
         <header>
-            <a href='admin.php'><img src="resoc.jpg" alt="Logo de notre réseau social"/></a>
-            <nav id="menu">
-                <a href="news.php">Actualités</a>
-                <a href="wall.php?user_id=5">Mur</a>
-                <a href="feed.php?user_id=5">Flux</a>
-                <a href="tags.php?tag_id=1">Mots-clés</a>
-            </nav>
-            <nav id="user">
-                <a href="#">▾ Profil</a>
-                <ul>
-                    <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
-                    <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
-                </ul>
-            </nav>
+            <?php include 'nav.php' ?>
         </header>
         <div id="wrapper">
             <aside>
@@ -47,7 +33,7 @@
                  */
 
                 // Etape 1: Ouvrir une connexion avec la base de donnée.
-                $mysqli = new mysqli("localhost", "root", "YES", "socialnetwork");
+                include 'connectionSql.php';
                 //verification
                 if ($mysqli->connect_error)
                 {
@@ -100,19 +86,7 @@
                     // 
                     // avec le ? > ci-dessous on sort du mode php et on écrit du html comme on veut... mais en restant dans la boucle
                     ?>
-                    <article>
-                        <h3>
-                            <time><?php echo $post['created'] ?></time>
-                        </h3>
-                        <address><?php echo "par " .$post['author_name'] ?></address>
-                        <div>
-                            <p><?php echo $post['content'] ?></p>
-                        </div>
-                        <footer>
-                            <small>♥ <?php echo $post['like_number'] ?> </small>
-                            <a href=""><?php echo " # ".$post['taglist'] ?></a>,
-                        </footer>
-                    </article>
+                    <?php include 'articlePost.php'?>
                     <?php
                     // avec le <?php ci-dessus on retourne en mode php 
                 }// cette accolade ferme et termine la boucle while ouverte avant.

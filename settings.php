@@ -8,22 +8,7 @@
     </head>
     <body>
         <header>
-            <img src="resoc.jpg" alt="Logo de notre réseau social"/>
-            <nav id="menu">
-                <a href="news.php">Actualités</a>
-                <a href="wall.php?user_id=5">Mur</a>
-                <a href="feed.php?user_id=5">Flux</a>
-                <a href="tags.php?tag_id=1">Mots-clés</a>
-            </nav>
-            <nav id="user">
-                <a href="#">Profil</a>
-                <ul>
-                    <li><a href="settings.php?user_id=5">Paramètres</a></li>
-                    <li><a href="followers.php?user_id=5">Mes suiveurs</a></li>
-                    <li><a href="subscriptions.php?user_id=5">Mes abonnements</a></li>
-                </ul>
-
-            </nav>
+            <?php include 'nav.php' ?>
         </header>
         <div id="wrapper" class='profile'>
 
@@ -38,6 +23,7 @@
                 </section>
             </aside>
             <main>
+                
                 <?php
                 /**
                  * Etape 1: Les paramètres concernent une utilisatrice en particulier
@@ -51,7 +37,7 @@
                 /**
                  * Etape 2: se connecter à la base de donnée
                  */
-                $mysqli = new mysqli("localhost", "root", "YES", "socialnetwork");
+                include 'connectionSql.php';
 
                 /**
                  * Etape 3: récupérer le nom de l'utilisateur
@@ -93,7 +79,7 @@
                         <dt>Nombre de "J'aime" donnés </dt>
                         <dd>1<?php echo $user['totalgiven'] ?></dd>
                         <dt>Nombre de "J'aime" reçus</dt>
-                        <dd><?php echo $user['totalrecieved '] ?></dd>
+                        <dd><?php echo $user['totalrecieved'] ?></dd>
                     </dl>
 
                 </article>
