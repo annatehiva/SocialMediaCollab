@@ -52,7 +52,8 @@
                 $laQuestionEnSql = "
                     SELECT posts.content,
                     posts.created,
-                    users.alias as author_name,  
+                    users.alias as author_name,
+                    users.id as author_id,  
                     count(likes.id) as like_number,  
                     GROUP_CONCAT(DISTINCT tags.label) AS taglist 
                     FROM posts_tags as filter 
@@ -77,7 +78,7 @@
                 while ($post = $lesInformations->fetch_assoc())
                 {
 
-                    //echo "<pre>" . print_r($post, 1) . "</pre>";
+                    // echo "<pre>" . print_r($post, 1) . "</pre>";
                     ?>                
                 <?php include 'articlePost.php'?>
                 <?php } ?>

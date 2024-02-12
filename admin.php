@@ -12,10 +12,7 @@
         </header>
 
         <?php
-        /**
-         * Etape 1: Ouvrir une connexion avec la base de donnée.
-         */
-        // on va en avoir besoin pour la suite
+        // Etape 1: Ouvrir une connexion avec la base de donnée.
         include 'connectionSql.php';
         //verification
         if ($mysqli->connect_error)
@@ -28,9 +25,8 @@
             <aside>
                 <h2>Mots-clés</h2>
                 <?php
-                /*
-                 * Etape 2 : trouver tous les mots clés
-                 */
+                
+                //  * Etape 2 : trouver tous les mots clés
                 $laQuestionEnSql = "SELECT * FROM `tags` LIMIT 50";
                 $lesInformations = $mysqli->query($laQuestionEnSql);
                 // Vérification
@@ -40,10 +36,9 @@
                     exit();
                 }
 
-                /*
-                 * Etape 3 : @todo : Afficher les mots clés en s'inspirant de ce qui a été fait dans news.php
-                 * Attention à en pas oublier de modifier tag_id=321 avec l'id du mot dans le lien
-                 */
+             
+                // * Etape 3 : @todo : Afficher les mots clés en s'inspirant de ce qui a été fait dans news.php
+               
                 while ($tag = $lesInformations->fetch_assoc())
                 {
                     //echo "<pre>" . print_r($tag, 1) . "</pre>";

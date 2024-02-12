@@ -9,6 +9,7 @@ session_start();
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+    
         <header>
             <img src="resoc.jpg" alt="Logo de notre réseau social"/>
             <?php include 'nav.php' ?>
@@ -65,6 +66,10 @@ session_start();
                         $postContent = $_POST['message'];
                         //$authorId = intval($mysqli->real_escape_string($authorId));
                         $postContent = $mysqli->real_escape_string($postContent);
+                        if (empty($postContent)){
+                            echo "Erreur";
+                        }
+                        else{
                         //Etape 4 : construction de la requete
                         $lInstructionSql = "INSERT INTO posts "
                                 . "(id, user_id, content, created, parent_id) "
@@ -78,7 +83,7 @@ session_start();
                         // echo $lInstructionSql;
                         // Etape 5 : execution
                         $ok = $mysqli->query($lInstructionSql);
-                        if ( ! $ok)
+                        if ( ! $ok || $postContent=="")
                         {
                             echo "Impossible d'ajouter le message: " . $mysqli->error;
                         } else
@@ -87,7 +92,7 @@ session_start();
                             header("location: wall.php?user_id=".$_SESSION['connected_id']);
                             exit;
                         }
-                    }
+                    }}
                     ?>
                     <form action="wall.php?user_id=<?php echo $_SESSION['connected_id'] ?> " method="post">
                         <dl>
@@ -95,7 +100,9 @@ session_start();
                             <dt><label for='message'>Message</label></dt>
                             <dd><textarea name='message'></textarea></dd>
                         </dl>
-                        <input type='submit'>
+                        <!-- <input type="text" class="form-control" required> -->
+                        <button [disabled]="message === ''">Envoyer</button>
+                        <!-- <input type='submit'> -->
                     </form>
                 </section>
             </aside>
