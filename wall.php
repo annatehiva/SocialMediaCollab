@@ -43,9 +43,9 @@ session_start();
                 ?>
                 <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
                 <section>
-                    <h3>Bienvenue sur votre mur, <?php echo $_SESSION['connected_alias'] ?></h3>
-                    <p>Sur cette page vous trouverez tous vos posts.
-                        (n° <?php echo $userId ?>)
+                    <h3>Bienvenue sur ton mur CielBlogue, <?php echo $_SESSION['connected_alias'] ?></h3>
+                    <p>Sur cette page, tu trouveras tous tes posts.
+                   
                     </p>
                     <?php
                          /**
@@ -95,8 +95,8 @@ session_start();
                     ?>
                     <form action="wall.php?user_id=<?php echo $_SESSION['connected_id'] ?> " method="post">
                         <dl>
-                            <dt><label for='auteur'>Auteur : <?php echo $_SESSION['connected_alias'] ?></label></dt>
-                            <dt><label for='message'>Message</label></dt>
+                            <dt><label for='auteur'>Auteur : <?php echo $_SESSION['connected_alias'] ?></label></dt><br>
+                            <dt><label for='message'>Message :</label></dt>
                             <dd><textarea name='message'></textarea></dd>
                         </dl>
                         <!-- <input type="text" class="form-control" required> -->
