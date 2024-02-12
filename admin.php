@@ -22,7 +22,7 @@
         }
         ?>
         <div id="wrapper" class='admin'>
-            <aside>
+            <aside class="bg">
                 <h2>Mots-clés</h2>
                 <?php
                 

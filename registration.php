@@ -13,7 +13,7 @@
 
         <div id="wrapper" >
 
-            <aside>
+            <aside class="bg">
                 <h2>Présentation</h2>
                 <p>Bienvenu sur notre réseau social.</p>
             </aside>

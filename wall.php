@@ -11,7 +11,6 @@ session_start();
     <body>
     
         <header>
-            <img src="resoc.jpg" alt="Logo de notre réseau social"/>
             <?php include 'nav.php' ?>
         </header>
         <div id="wrapper">
@@ -31,7 +30,7 @@ session_start();
              */
                 include 'connectionSql.php';
             ?>
-            <aside>
+            <aside class="bg">
                 <?php
                 /**
                  * Etape 3: récupérer le nom de l'utilisateur
@@ -42,7 +41,7 @@ session_start();
                 //@todo: afficher le résultat de la ligne ci dessous, remplacer XXX par l'alias et effacer la ligne ci-dessous
                 //echo "<pre>" . print_r($user, 1) . "</pre>";
                 ?>
-                <img src="user.jpg" alt="Portrait de l'utilisatrice"/>
+                <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
                 <section>
                     <h3>Bienvenue sur votre mur, <?php echo $_SESSION['connected_alias'] ?></h3>
                     <p>Sur cette page vous trouverez tous vos posts.

@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(238, 106, 183);
+    background-image: url(bground.jpg);
     font-family: Arial;
 }
 
@@ -159,6 +159,7 @@ form dl dt{float:left;font-weight: bold;line-height: 1.5em;}
 form dl dd{margin-left:10em;line-height: 1.5em;margin-bottom: 1em}
 form dl dd textarea{width:40em;height: 15em;}
 
+/*logout*/
 .logout 
 {
 display: flex;
@@ -168,9 +169,20 @@ justify-content: center;
 margin-top: 30px;
 }
 
+.logout button {
+    width: 150px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .logout a {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
+.bg {
+    background-image: url(rose.jpg);
+    background-color: rgb(238, 106, 183);
+}
 

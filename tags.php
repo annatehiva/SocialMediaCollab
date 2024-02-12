@@ -26,7 +26,7 @@
             ?>
             <?php include 'connectionSql.php'?>
 
-            <aside>
+            <aside class="bg">
                 <?php
                 /**
                  * Etape 3: récupérer le nom du mot-clé
@@ -37,7 +37,7 @@
                 //@todo: afficher le résultat de la ligne ci dessous, remplacer XXX par le label et effacer la ligne ci-dessous
                 //echo "<pre>" . print_r($tag, 1) . "</pre>";
                 ?>
-                <img src="user.jpg" alt="Portrait de l'utilisatrice"/>
+                <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
                 <section>
                     <h3>Présentation</h3>
                     <p>Sur cette page vous trouverez les derniers messages comportant

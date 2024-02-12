@@ -11,8 +11,8 @@
             <?php include 'nav.php' ?>
         </header>
         <div id="wrapper">          
-            <aside>
-                <img src = "user.jpg" alt = "Portrait de l'utilisatrice"/>
+            <aside class="bg">
+                <img src = "papillon.gif" alt = "Portrait de l'utilisatrice"/>
                 <section>
                     <h3>Présentation</h3>
                     <p>Sur cette page vous trouverez la liste des personnes qui
