@@ -10,16 +10,9 @@ session_start();
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <header>
-            <?php include 'nav.php'; ?>
-        </header>
-
+       
         <div id="wrapper" >
-
-            <aside>
-                <h2>Présentation</h2>
-                <p>Bienvenu sur notre réseau social.</p>
-            </aside>
+            
             <main>
                 <article>
                     <h2>Connexion</h2>
