@@ -41,36 +41,44 @@ session_start();
                 //@todo: afficher le résultat de la ligne ci dessous, remplacer XXX par l'alias et effacer la ligne ci-dessous
                 //echo "<pre>" . print_r($user, 1) . "</pre>";
                 ?>
-                <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
-                <section>
-                    <h3>Bienvenue sur ton mur CielBlogue, <?php echo $_SESSION['connected_alias'] ?></h3>
-                    <p>Sur cette page, tu trouveras tous tes posts.
-                   
-                    </p>
-                    <?php
+                
+                <section class='centerCompteProfil'>
+                    <div class='profilWall'>
+                        <div> 
+                            <?php include 'imgProfil.php' ?>
+                        </div>
+                        <div class='fontDesign'>
+                            <h3>Bienvenue <?php echo $_SESSION['connected_alias'] ?> sur ton mur CielBlogue !</h3>
+                            <p>Sur cette page, tu trouveras tous tes posts.
+                        </div>
+                    </div>
+
+                    <div class='fontDesign'>
+                        </p>
+                            <?php
                          /**
                         * TRAITEMENT DU FORMULAIRE
                         */
                         // Etape 1 : vérifier si on est en train d'afficher ou de traiter le formulaire
                         // si on recoit un champs email rempli il y a une chance que ce soit un traitement
-                        $enCoursDeTraitement = isset($_POST['message']);
-                        if ($enCoursDeTraitement)
-                        {
+                            $enCoursDeTraitement = isset($_POST['message']);
+                            if ($enCoursDeTraitement)
+                            {
                         // on ne fait ce qui suit que si un formulaire a été soumis.
                         // Etape 2: récupérer ce qu'il y a dans le formulaire @todo: c'est là que votre travaille se situe
                         // observez le résultat de cette ligne de débug (vous l'effacerez ensuite)
                         //echo "<pre>" . print_r($_POST, 1) . "</pre>";
                         // et complétez le code ci dessous en remplaçant les ???
                         //$authorId = $_POST['auteur'];
-                        $postContent = $_POST['message'];
+                            $postContent = $_POST['message'];
                         //$authorId = intval($mysqli->real_escape_string($authorId));
-                        $postContent = $mysqli->real_escape_string($postContent);
-                        if (empty($postContent)){
-                            echo "Erreur";
-                        }
-                        else{
+                            $postContent = $mysqli->real_escape_string($postContent);
+                            if (empty($postContent)){
+                                echo "Erreur";
+                            }
+                            else{
                         //Etape 4 : construction de la requete
-                        $lInstructionSql = "INSERT INTO posts "
+                            $lInstructionSql = "INSERT INTO posts "
                                 . "(id, user_id, content, created, parent_id) "
                                 . "VALUES (NULL, "
                                 . $_SESSION['connected_id'] . ", "
@@ -81,21 +89,20 @@ session_start();
                                 ;
                         // echo $lInstructionSql;
                         // Etape 5 : execution
-                        $ok = $mysqli->query($lInstructionSql);
-                        if ( ! $ok || $postContent=="")
-                        {
-                            echo "Impossible d'ajouter le message: " . $mysqli->error;
-                        } else
-                        {
-                            echo "Message posté en tant que :";
-                            header("location: wall.php?user_id=".$_SESSION['connected_id']);
-                            exit;
-                        }
-                    }}
-                    ?>
+                            $ok = $mysqli->query($lInstructionSql);
+                            if ( ! $ok || $postContent=="")
+                            {
+                                echo "Impossible d'ajouter le message: " . $mysqli->error;
+                            } else
+                            {
+                                echo "Message posté en tant que :";
+                                header("location: wall.php?user_id=".$_SESSION['connected_id']);
+                                exit;
+                            }
+                        }}
+                        ?>
                     <form action="wall.php?user_id=<?php echo $_SESSION['connected_id'] ?> " method="post">
                         <dl>
-                            <dt><label for='auteur'>Auteur : <?php echo $_SESSION['connected_alias'] ?></label></dt><br>
                             <dt><label for='message'>Message :</label></dt>
                             <dd><textarea name='message'></textarea></dd>
                         </dl>
@@ -103,6 +110,7 @@ session_start();
                         <button [disabled]="message === ''">Envoyer</button>
                         <!-- <input type='submit'> -->
                     </form>
+                        </div>
                 </section>
             </aside>
             <main>

@@ -7,18 +7,14 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <header>
-            <?php include 'nav.php'; ?>
-        </header>
+       
 
-        <div id="wrapper" >
-
-            <aside class="bg">
-                <h2>Présentation</h2>
-                <p>Bienvenu sur notre réseau social.</p>
-            </aside>
+        <div>
+        
             <main>
-                <article>
+                <h1 class='title'>Bienvenue sur CielBlogue</h1>
+                <article class="bg articleCenter">
+                    <img src="./images/cielChat.png">
                     <h2>Inscription</h2>
                     <?php
                     /**

@@ -11,10 +11,12 @@ session_start();
     </head>
     <body>
        
-        <div id="wrapper" >
+        <div>
             
             <main>
-                <article>
+                <h1 class='title'>Bienvenue sur CielBlogue</h1>
+                <article class="bg articleCenter">
+                    <img src="./images/cielChat.png">
                     <h2>Connexion</h2>
                     <?php
                     /**
@@ -82,7 +84,7 @@ session_start();
 
                     </form>
                     <p>
-                        Pas de compte?
+                        Pas de compte? 
                         <a href='registration.php'>Inscrivez-vous.</a>
                     </p>
 
