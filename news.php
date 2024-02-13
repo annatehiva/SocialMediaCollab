@@ -15,7 +15,7 @@
         </header>
         <div id="wrapper">
             <aside class="bg">
-                <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
+               <?php include "imgProfil.php"; ?>
                 <section>
                     <h3>Présentation</h3>
                     <p>Sur cette page tu trouveras les derniers messages de
