@@ -8,15 +8,19 @@ session_start();
         <title>ReSoC - Connexion</title> 
         <meta name="author" content="Julien Falconnet">
         <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Riot&display=swap" rel="stylesheet">
     </head>
-    <body>
+
+    <body class="protest-riot-regular">
        
         <div>
             
             <main>
                 <h1 class='title'>Bienvenue sur CielBlogue</h1>
                 <article class="bg articleCenter">
-                    <img src="./images/cielChat.png">
+                    <img src="./images/nyanCat.gif">
                     <h2>Connexion</h2>
                     <?php
                     /**

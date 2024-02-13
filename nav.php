@@ -1,7 +1,7 @@
 
 
 
-    <a href='admin.php'><img src="./images/cielChat.png" alt="Logo de notre réseau social"/></a>
+    <a class="nyanCat" href='admin.php'><img  src="./images/nyanCat.gif" alt="Logo de notre réseau social"/></a>
     
         <nav class='designNav' id="menu">
             <a href="news.php">Actualités</a>

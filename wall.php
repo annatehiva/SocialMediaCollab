@@ -7,8 +7,12 @@ session_start();
         <title>ReSoC - Mur</title>
         <meta name="author" content="Julien Falconnet">
         <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Riot&display=swap" rel="stylesheet">
     </head>
-    <body>
+    
+    <body class="protest-riot-regular">
     
         <header>
             <?php include 'nav.php' ?>
@@ -107,7 +111,7 @@ session_start();
                             <dd><textarea name='message'></textarea></dd>
                         </dl>
                         <!-- <input type="text" class="form-control" required> -->
-                        <button [disabled]="message === ''">Envoyer</button>
+                        <button class="buttonWall" [disabled]="message === ''">Envoyer</button>
                         <!-- <input type='submit'> -->
                     </form>
                         </div>
