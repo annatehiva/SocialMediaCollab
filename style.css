@@ -2,26 +2,21 @@ body{
     background-image: url(./images/bground.jpg);
     font-family: Arial;
 }
-
 .protest-revolution-regular {
     font-family: "Protest Revolution", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
- 
   .protest-riot-regular {
     font-family: "Protest Riot", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-
 a{text-decoration: none; color:#ffee9b;}
 a:hover{text-decoration: underline;}
-
 p {
     color: rgb(146, 28, 126);
 }
-
 .nameLink {
     color: black;
 }
@@ -29,9 +24,8 @@ body>header{
     background-color: rgb(238, 106, 183);
     display:flex;
     width:80em;
-    margin:0 auto 2em auto;    
+    margin:0 auto 2em auto;
     padding:0;
-
 }
 body>header img{
     height:5em;
@@ -52,7 +46,6 @@ body>header #menu a{
 body>header a:hover
 {
     background-color: rgb(17, 157, 250);
-       
 }
 body>header ul{list-style: none;}
 body>header #user
@@ -67,7 +60,7 @@ body>header #user>a{
     padding:2em 0;
     width:100%;
 }
-body>header #user ul{ 
+body>header #user ul{
     display: none;
     position: absolute;
     padding:0;
@@ -75,7 +68,6 @@ body>header #user ul{
     margin-left:-5em;
     background-color: rgb(238, 106, 183);
     border: 1px solid #99b;
-
     z-index: 1;
 }
 body>header #user ul li a{
@@ -86,12 +78,9 @@ body>header #user ul li a{
 }
 body>header #user:hover ul{
     display:block;
-    
 }
-
-
 #wrapper{
-    display:flex;    
+    display:flex;
     width:80em;
     margin:0 auto 2em auto;
 }
@@ -99,14 +88,13 @@ body>header #user:hover ul{
     background-color: #fff;
     flex:1;
     padding:1em;
-    border-radius: 1em;    
+    border-radius: 1em;
 }
 #wrapper aside img{
     display: block;
     width:50%;
     margin:auto;
 }
-
 #wrapper main{
     flex:3;
     padding-left:1em;
@@ -114,7 +102,7 @@ body>header #user:hover ul{
     overflow-y:  scroll;
 }
 #wrapper main article{
-    background-color: #ffee9b;
+    background-color: #FFEE9B;
     padding:1em;
     margin-bottom: 1em ;
     border-radius: 1em;
@@ -124,7 +112,6 @@ body>header #user:hover ul{
     padding:0;
     font-weight: normal;
     font-size:1em;
-
 }
 #wrapper main article time{
     float:left;
@@ -143,7 +130,6 @@ body>header #user:hover ul{
 #wrapper main article footer small{
     float:left;
 }
-
 #wrapper.admin{flex-direction: row-reverse}
 #wrapper.admin aside{flex:1;margin-left:1em;border-radius:0;padding:0;}
 #wrapper.admin main{flex:2;background-color: #fff;border-radius: 0;padding:0;}
@@ -152,11 +138,8 @@ body>header #user:hover ul{
 #wrapper.admin nav{text-align: right;}
 #wrapper.admin article{border:1px solid #ddd;border-radius: 1em;padding:1em;margin:1em;}
 #wrapper.admin article p{float:left;margin:0;}
-
-
 .parameters dl dt{float:left;font-weight: bold;line-height: 1.5em;}
 .parameters dl dd{margin-left:15em;line-height: 1.5em;}
-
 .contacts {
     display:flex;
     flex-wrap: wrap;
@@ -172,17 +155,14 @@ body>header #user:hover ul{
     float:right;
     height: 5em;
 }
-
 pre{
     color:#aaa;
 }
-
 form dl dt{float:left;font-weight: bold;line-height: 1.5em;}
 form dl dd{margin-left:10em;line-height: 1.5em;margin-bottom: 1em}
 form dl dd textarea{width:40em;height: 15em;}
-
 /*logout*/
-.logout 
+.logout
 {
 display: flex;
 flex-direction: column;
@@ -190,24 +170,20 @@ align-items: center;
 justify-content: center;
 margin-top: 30px;
 }
-
 .logout button {
     width: 150px;
     height: 50px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 .logout a {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 .bg {
     background-image: url(./images/rose.jpg);
     background-color: rgb(238, 106, 183);
 }
-
 .articleCenter{
     display: flex;
     flex-direction: column;
@@ -217,22 +193,18 @@ margin-top: 30px;
     margin: auto;
     padding-bottom: 30px;
 }
-
 .articleCenter img{
     position: absolute;
     right: 35%;
     top: 20%;
     width: 100px;
     height: auto;
-    
 }
-
 .title{
     text-align: center;
     color: rgb(17, 157, 250);
     text-shadow:0px 0px 10px black;
 }
-
 .conteneurImg{
     width: auto;
     height: 200px;
@@ -246,23 +218,18 @@ margin-top: 30px;
 .centerCompteProfil{
     display: flex;
     flex-direction: column;
-
 }
-
 .profilWall{
     display: flex;
     flex-direction: row;
 }
-
 .fontDesign{
     color:white;
     text-shadow: 0px 0px 10px rgb(17, 157, 250);
 }
-
 .nyanCat {
     background-color: rgb(45, 190, 255);
 }
-
 .buttonWall {
     width: 80px;
     height: 40px;
