@@ -40,7 +40,7 @@
                 //@todo: afficher le résultat de la ligne ci dessous, remplacer XXX par le label et effacer la ligne ci-dessous
                 //echo "<pre>" . print_r($tag, 1) . "</pre>";
                 ?>
-                <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
+                <?php include 'imgProfil.php' ?>
                 <section>
                     <h3>Présentation</h3>
                     <p>Sur cette page vous trouverez les derniers messages comportant
@@ -56,7 +56,8 @@
                  * Etape 3: récupérer tous les messages avec un mot clé donné
                  */
                 $laQuestionEnSql = "
-                    SELECT posts.content,
+                    SELECT posts.id,
+                    posts.content,
                     posts.created,
                     users.alias as author_name,
                     users.id as author_id,  
@@ -86,7 +87,12 @@
 
                     // echo "<pre>" . print_r($post, 1) . "</pre>";
                     ?>                
-                <?php include 'articlePost.php'?>
+                <?php include 'articlePost.php';
+                 if ($likeEnCoursTraitement) {
+                    header("Location: tags.php?tag_id=1");
+                    exit;
+                }?>
+
                 <?php } ?>
 
 

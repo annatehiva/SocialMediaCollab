@@ -132,7 +132,7 @@ session_start();
                  * Etape 3: récupérer tous les messages de l'utilisatrice
                  */
                     $laQuestionEnSql = "
-                        SELECT posts.content, posts.created, users.alias as author_name,
+                        SELECT posts.id, posts.content, posts.created, users.alias as author_name,
                         users.id as author_id,
                         COUNT(likes2.id) as like_number, GROUP_CONCAT(DISTINCT tags.label) AS taglist
                         FROM posts
@@ -154,7 +154,14 @@ session_start();
                     while ($post = $lesInformations->fetch_assoc()){
                     //echo "<pre>" . print_r($post, 1) . "</pre>";
                     include 'articlePost.php';
-                } ?>
+                    if ($likeEnCoursTraitement) {
+                        header("Location: wall.php?user_id=".$post['author_id']);
+                        exit;
+                    }
+                } 
+                    
+                ?>
+               
                 <!-- Le bouton d'abonnement: si c'est le mur de la personne que l'utilisateur n'a pas abonné, afficher le boutton,
                     si c'est le mur de la personne que l'utilisateur a abonné, afficher que "Vous avez bien abonné cet auteure !",
                     si c'est le mur de propre utilisateur, affiche rien. -->
@@ -179,7 +186,7 @@ session_start();
                                 $requetAbonnement =
                                     "INSERT INTO followers"
                                     . "(id, followed_user_id, following_user_id) " .
-                                    "VALUES(NULL," .$userId. "," .$_SESSION['connected_id'].")";
+                                    "VALUES(NULL,".$userId. "," .$_SESSION['connected_id'].")";
                                 $ajouteAbonnement = $mysqli->query($requetAbonnement);
                                 header("location: wall.php?user_id=".$userId);
                                 exit;

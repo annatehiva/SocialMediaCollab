@@ -32,8 +32,6 @@
                 </section>
             </aside>
             <main>
-                             
-
                 <?php
                 /*
                   // C'est ici que le travail PHP commence
@@ -60,7 +58,8 @@
                 // cette requete vous est donnée, elle est complexe mais correcte, 
                 // si vous ne la comprenez pas c'est normal, passez, on y reviendra
                 $laQuestionEnSql = "
-                    SELECT posts.content,
+                    SELECT posts.id,
+                    posts.content,
                     posts.created,
                     users.alias as author_name,
                     users.id as author_id,  
@@ -99,7 +98,14 @@
                     // 
                     // avec le ? > ci-dessous on sort du mode php et on écrit du html comme on veut... mais en restant dans la boucle
                     ?>
-                    <?php include 'articlePost.php'?>
+                    <?php include 'articlePost.php';
+                        if ($likeEnCoursTraitement) {
+                            header("Location: news.php");
+                            exit;
+                        }
+
+                    ?>
+
                     <?php
                     // avec le <?php ci-dessus on retourne en mode php 
                 }// cette accolade ferme et termine la boucle while ouverte avant.

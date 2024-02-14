@@ -47,7 +47,7 @@
                 //@todo: afficher le résultat de la ligne ci dessous, remplacer XXX par l'alias et effacer la ligne ci-dessous
                 //echo "<pre>" . print_r($user, 1) . "</pre>";
                 ?>
-                <img src="papillon.gif" alt="Portrait de l'utilisatrice"/>
+                <?php include 'imgProfil.php' ?>
                 <section>
                     <h3>Présentation</h3>
                     <p>Sur cette page, tu trouveras tous les messages des utilisatrices
@@ -63,7 +63,7 @@
                  * Etape 3: récupérer tous les messages des abonnements
                  */
                 $laQuestionEnSql = "
-                    SELECT posts.content,
+                    SELECT posts.id, posts.content,
                     posts.created,
                     users.alias as author_name,
                     users.id as author_id,
@@ -91,7 +91,12 @@
                 while ($post = $lesInformations->fetch_assoc())
                 {
                 ?>                
-                <?php include 'articlePost.php'?>
+                <?php include 'articlePost.php';
+                    if ($likeEnCoursTraitement) {
+                        header("Location: feed.php?user_id=".$_SESSION['connected_id']);
+                        exit;
+                }
+                ?>
                 <?php
                 // et de pas oublier de fermer ici vote while
                 }?>
