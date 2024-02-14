@@ -234,8 +234,13 @@ margin-top: 30px;
 }
 
 .conteneurImg{
-    width: 200px;
+    width: auto;
     height: 200px;
+}
+
+.conteneurImg img {
+    width: auto;
+    height: auto;
 }
 
 .centerCompteProfil{

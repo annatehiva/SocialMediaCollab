@@ -35,6 +35,7 @@ session_start();
                 include 'connectionSql.php';
             ?>
             <aside class="bg">
+                
                 <?php
                 /**
                  * Etape 3: récupérer le nom de l'utilisateur
