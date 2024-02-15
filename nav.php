@@ -1,6 +1,3 @@
-
-
-
     <a class="nyanCat" href='admin.php'><img  src="./images/nyanCat.gif" alt="Logo de notre réseau social"/></a>
     
         <nav class='designNav' id="menu">

@@ -1,5 +1,9 @@
 <?php
-    session_start();
+session_start();
+if(!$_SESSION['connected_id']){
+    header("Location: login.php");
+    exit;
+}
 ?>
 <!doctype html>
 <html lang="fr">
