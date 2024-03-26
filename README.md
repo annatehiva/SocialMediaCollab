@@ -28,9 +28,9 @@ Le projet a duré 7 jours.
 3. accéder au site internet
 
 ## Compétences acquises
-- débuggage d’un code existant
-- découvert de PHP et de son interaction avec SQL
-- création de nouvelle fonctionnalités qui récupèrent des données
+- débogage d’un code existant
+- découverte de PHP et de son interaction avec SQL
+- création de nouvelles fonctionnalités qui récupèrent des données
 - création de l’interface graphique
 
 ----
