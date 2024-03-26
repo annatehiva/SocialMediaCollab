@@ -9,7 +9,7 @@ Le projet a duré 7 jours.
 
 ![Anna Tehiva](https://github.com/annatehiva)  
 ![Fabienne Lis](https://github.com/FabienneLIS)  
-![Maguelone Guinaud](https://github.com/magueloneguinaud) 
+![Maguelone Guinaud](https://github.com/magueloneguinaud)  
 ![Tianhong Huang](https://github.com/Tianhong258)
 
 ## Langages utilisés
