@@ -8,7 +8,7 @@ Cielblogue is a PHP-based social media platform that underwent improvements and 
 Note: we drew inspiration from the kitschy and 2000s-fashion social media such as Skyblog.
 ![Le visuel réseau social](/images/Actualités.png)
 
-## Teammates
+## Team Members
 [Anna Tehiva](https://github.com/annatehiva)  
 [Fabienne Lis](https://github.com/FabienneLIS)  
 [Maguelone Guinaud](https://github.com/magueloneguinaud)  
