@@ -1,8 +1,9 @@
 # Social media project: Cielblogue
-####school_project ####collective_project
+[school_project] [collective_project]
 
 ## Overview
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![XAMPP](https://img.shields.io/badge/XAMPP-100000?style=for-the-badge&logo=XAMPP&logoColor=white&labelColor=E47D29&color=E47D29)
+
 Cielblogue is a PHP-based social media platform that underwent improvements and bug fixes as part of a school exercise within a 7-day timeframe. 
 Note: we drew inspiration from the kitschy and 2000s-fashion social media such as Skyblog.
 ![Le visuel réseau social](/images/Actualités.png)
